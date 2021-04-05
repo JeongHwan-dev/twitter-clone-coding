@@ -1,5 +1,6 @@
 import { dbService } from "fBase";
 import React, { useEffect, useState } from "react";
+import Tweet from "components/Tweet";
 
 const Home = ({ userObj }) => {
   const [tweet, setTweet] = useState("");
@@ -54,16 +55,18 @@ const Home = ({ userObj }) => {
           type="text"
           value={tweet}
           onChange={onChange}
-          placeholder="What's on your mind?"
+          placeholder="내용을 입력하세요."
           maxLength={120}
         />
         <input type="submit" value="Tweet" />
       </form>
       <div>
         {tweets.map((tweet) => (
-          <div key={tweet.id}>
-            <h4>{tweet.text}</h4>
-          </div>
+          <Tweet
+            key={tweet.id}
+            tweetObj={tweet}
+            isOwner={tweet.creatorId === userObj.uid}
+          />
         ))}
       </div>
     </div>
