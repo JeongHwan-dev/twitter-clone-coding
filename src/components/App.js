@@ -23,7 +23,7 @@ function App() {
       ) : (
         "Initializing..."
       )}
-      <footer>&copy; {new Date().getFullYear()} Twitter-clone</footer>
+      {/* <footer>&copy; {new Date().getFullYear()} Twitter-clone</footer> */}
     </>
   );
 }
