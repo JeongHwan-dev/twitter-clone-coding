@@ -18,17 +18,14 @@ const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
             <Route exact path="/profile">
               <Profile userObj={userObj} refreshUser={refreshUser} />
             </Route>
-            {/* <Redirect from="*" to="/" /> */}
           </>
         ) : (
           <>
             <Route exact path="/">
               <Auth />
             </Route>
-            {/* <Redirect from="*" to="/" /> */}
           </>
         )}
-        {console.log(isLoggedIn)}
       </Switch>
     </Router>
   );

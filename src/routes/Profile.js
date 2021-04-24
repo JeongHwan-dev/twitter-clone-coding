@@ -8,9 +8,7 @@ const Profile = ({ userObj, refreshUser }) => {
 
   const onLogOutClick = () => {
     authService.signOut();
-
     history.push("/");
-    // window.location.replace("/");
   };
 
   const onChange = (event) => {

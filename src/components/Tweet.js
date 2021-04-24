@@ -19,7 +19,6 @@ const Tweet = ({ tweetObj, isOwner }) => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    console.log(tweetObj, newTweet);
     await dbService.doc(`tweets/${tweetObj.id}`).update({
       text: newTweet,
     });
