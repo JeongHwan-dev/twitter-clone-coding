@@ -1,5 +1,7 @@
 import { dbService, storageService } from "fBase";
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Tweet = ({ tweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
@@ -33,37 +35,43 @@ const Tweet = ({ tweetObj, isOwner }) => {
   };
 
   return (
-    <div>
+    <div className="tweet">
       {editing ? (
         <>
           {isOwner && (
             <>
-              <form onSubmit={onSubmit}>
+              <form className="container tweetEdit" onSubmit={onSubmit}>
                 <input
+                  className="formInput"
                   type="text"
                   placeholder="Edit your tweet"
                   value={newTweet}
                   required
+                  autoFocus
                   onChange={onChange}
                 />
-                <input type="submit" value="Update Tweet" />
+                <input className="formBtn" type="submit" value="Update Tweet" />
               </form>
-              <button onClick={toggleEditing}>Cancel</button>
+              <button className="formBtn cancelBtn" onClick={toggleEditing}>
+                Cancel
+              </button>
             </>
           )}
         </>
       ) : (
         <>
           <h4>{tweetObj.text}</h4>
-          {tweetObj.attachmentUrl && (
-            <img src={tweetObj.attachmentUrl} width="50px" height="50px" />
-          )}
+          {tweetObj.attachmentUrl && <img src={tweetObj.attachmentUrl} />}
           {/* 오너일때만 버튼 표기 */}
           {isOwner && (
-            <>
-              <button onClick={onDeleteClick}>Delete Tweet</button>
-              <button onClick={toggleEditing}>Edit Tweet</button>
-            </>
+            <div className="tweet_actions">
+              <span onClick={onDeleteClick}>
+                <FontAwesomeIcon icon={faTrash} />
+              </span>
+              <span onClick={toggleEditing}>
+                <FontAwesomeIcon icon={faPencilAlt} />
+              </span>
+            </div>
           )}
         </>
       )}

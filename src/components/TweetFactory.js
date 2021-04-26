@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { storageService, dbService } from "fBase";
 import { v4 as uuidv4 } from "uuid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const TweetFactory = ({ userObj }) => {
   const [tweet, setTweet] = useState("");
@@ -63,20 +65,36 @@ const TweetFactory = ({ userObj }) => {
   const onClearAttachment = () => setAttachment("");
 
   return (
-    <form onSubmit={onSubmit}>
+    <form className="factoryForm" onSubmit={onSubmit}>
+      <div className="factoryInput_container">
+        <input
+          className="factoryInput_input"
+          type="text"
+          value={tweet}
+          onChange={onChange}
+          placeholder="내용을 입력하세요."
+          maxLength={120}
+        />
+        <input className="factoryInput_arrow" type="submit" value="&rarr;" />
+      </div>
+      <label for="attach-file" className="factoryInput_label">
+        <span>Add photos</span>
+        <FontAwesomeIcon icon={faPlus} />
+      </label>
       <input
-        type="text"
-        value={tweet}
-        onChange={onChange}
-        placeholder="내용을 입력하세요."
-        maxLength={120}
+        id="attach-file"
+        type="file"
+        accept="image/*"
+        onChange={onFileChange}
+        style={{ opacity: 0 }}
       />
-      <input type="file" accept="image/*" onChange={onFileChange} />
-      <input type="submit" value="Tweet" />
       {attachment && (
-        <div>
-          <img src={attachment} width="50px" height="50px" />
-          <button onClick={onClearAttachment}>Clear</button>
+        <div className="factoryForm_attachment">
+          <img src={attachment} style={{ backgroundImage: attachment }} />
+          <div className="factoryForm_clear" onClick={onClearAttachment}>
+            <span>Remove</span>
+            <FontAwesomeIcon icon={faTimes} />
+          </div>
         </div>
       )}
     </form>
