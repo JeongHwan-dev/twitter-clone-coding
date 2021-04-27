@@ -60,18 +60,37 @@ const Tweet = ({ tweetObj, isOwner }) => {
         </>
       ) : (
         <>
-          <h4>{tweetObj.text}</h4>
-          {tweetObj.attachmentUrl && <img src={tweetObj.attachmentUrl} />}
-          {/* 오너일때만 버튼 표기 */}
-          {isOwner && (
-            <div className="tweet_actions">
-              <span onClick={onDeleteClick}>
-                <FontAwesomeIcon icon={faTrash} />
-              </span>
-              <span onClick={toggleEditing}>
-                <FontAwesomeIcon icon={faPencilAlt} />
-              </span>
-            </div>
+          {tweetObj.attachmentUrl ? (
+            <>
+              <h4 className="tweet_attachment">{tweetObj.text}</h4>
+              <img src={tweetObj.attachmentUrl} />
+              {/* 오너일때만 버튼 표기 */}
+              {isOwner && (
+                <div className="tweet_actions">
+                  <span onClick={onDeleteClick}>
+                    <FontAwesomeIcon icon={faTrash} />
+                  </span>
+                  <span onClick={toggleEditing}>
+                    <FontAwesomeIcon icon={faPencilAlt} />
+                  </span>
+                </div>
+              )}
+            </>
+          ) : (
+            <>
+              <h4>{tweetObj.text}</h4>
+              {/* 오너일때만 버튼 표기 */}
+              {isOwner && (
+                <div className="tweet_actions">
+                  <span onClick={onDeleteClick}>
+                    <FontAwesomeIcon icon={faTrash} />
+                  </span>
+                  <span onClick={toggleEditing}>
+                    <FontAwesomeIcon icon={faPencilAlt} />
+                  </span>
+                </div>
+              )}
+            </>
           )}
         </>
       )}
