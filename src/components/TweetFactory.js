@@ -8,6 +8,7 @@ const TweetFactory = ({ userObj }) => {
   const [tweet, setTweet] = useState("");
   const [attachment, setAttachment] = useState("");
 
+  // [CREATE] 트윗 생성 핸들러
   const onSubmit = async (event) => {
     event.preventDefault();
     let attachmentUrl = "";
@@ -35,6 +36,7 @@ const TweetFactory = ({ userObj }) => {
     setAttachment("");
   };
 
+  // 새 트윗 작성 핸들러
   const onChange = (event) => {
     const {
       target: { value },
@@ -42,6 +44,7 @@ const TweetFactory = ({ userObj }) => {
     setTweet(value);
   };
 
+  // 첨부파일 핸들러
   const onFileChange = (event) => {
     const {
       target: { files },
@@ -62,6 +65,7 @@ const TweetFactory = ({ userObj }) => {
     }
   };
 
+  // 업로드 대기 상태인 첨부파일 취소 핸들러
   const onClearAttachment = () => setAttachment("");
 
   return (

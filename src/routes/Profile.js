@@ -7,11 +7,13 @@ const Profile = ({ userObj, refreshUser }) => {
   const history = useHistory();
   const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
 
+  // 로그아웃 핸들러
   const onLogOutClick = () => {
     authService.signOut();
     history.push("/");
   };
 
+  // 수정 닉네임 작성 핸들러
   const onChange = (event) => {
     const {
       target: { value },
@@ -19,6 +21,7 @@ const Profile = ({ userObj, refreshUser }) => {
     setNewDisplayName(value);
   };
 
+  // 수정 완료 버튼 핸들러
   const onSubmit = async (event) => {
     const ok = await swal("수정하시겠습니까?", {
       buttons: ["취소", "완료"],
@@ -26,7 +29,6 @@ const Profile = ({ userObj, refreshUser }) => {
 
     if (ok) {
       event.preventDefault();
-
       if (userObj.displayName !== newDisplayName) {
         await userObj.updateProfile({
           displayName: newDisplayName,

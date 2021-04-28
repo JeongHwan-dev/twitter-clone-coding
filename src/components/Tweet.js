@@ -8,14 +8,13 @@ const Tweet = ({ tweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
   const [newTweet, setNewTweet] = useState(tweetObj.text);
 
+  // [DELETE] 트윗 삭제 핸들러
   const onDeleteClick = async () => {
-    // const ok = window.confirm("삭제하시겠습니까?");
     const ok = await swal("삭제하시겠습니까?", {
       buttons: ["취소", "완료"],
     });
 
     if (ok) {
-      // delete tweet
       await dbService.doc(`tweets/${tweetObj.id}`).delete();
       await storageService.refFromURL(tweetObj.attachmentUrl).delete();
     }
@@ -23,6 +22,7 @@ const Tweet = ({ tweetObj, isOwner }) => {
 
   const toggleEditing = () => setEditing((prev) => !prev);
 
+  // [UPDATE] 트윗 수정 핸들러
   const onSubmit = async (event) => {
     event.preventDefault();
     await dbService.doc(`tweets/${tweetObj.id}`).update({

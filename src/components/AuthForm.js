@@ -7,6 +7,7 @@ const AuthForm = () => {
   const [newAccount, setNewAccount] = useState(true);
   const [error, setError] = useState("");
 
+  // 이메일, 비밀번호 입력 핸들러
   const onChange = (event) => {
     const {
       target: { name, value },

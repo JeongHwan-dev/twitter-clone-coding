@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Auth = () => {
+  // 소셜 로그인 핸들러
   const onSocialClick = async (event) => {
     const {
       target: { name },
