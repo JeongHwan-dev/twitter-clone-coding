@@ -19,18 +19,19 @@ const AuthForm = () => {
     }
   };
 
+  // 로그인, 회원가입 버튼 클릭 핸들러
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
       let data;
       if (newAccount) {
-        // create account
+        // 회원가입
         data = await authService.createUserWithEmailAndPassword(
           email,
           password
         );
       } else {
-        // log in
+        // 로그인
         data = await authService.signInWithEmailAndPassword(email, password);
       }
       console.log(data);
@@ -65,12 +66,12 @@ const AuthForm = () => {
         <input
           className="authInput authSubmit"
           type="submit"
-          value={newAccount ? "Create Account" : "Log In"}
+          value={newAccount ? "회원가입" : "로그인"}
         />
         {error && <span className="authError">{error}</span>}
       </form>
       <span className="authSwitch" onClick={toggleAccount}>
-        {newAccount ? "Sign In" : "Create Account"}
+        {newAccount ? "로그인" : "회원가입"}
       </span>
     </>
   );

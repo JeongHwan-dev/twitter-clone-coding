@@ -2,14 +2,18 @@ import { dbService, storageService } from "fBase";
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import swal from "sweetalert";
 
 const Tweet = ({ tweetObj, isOwner }) => {
   const [editing, setEditing] = useState(false);
   const [newTweet, setNewTweet] = useState(tweetObj.text);
 
   const onDeleteClick = async () => {
-    const ok = window.confirm("삭제하시겠습니까?");
-    console.log(ok);
+    // const ok = window.confirm("삭제하시겠습니까?");
+    const ok = await swal("삭제하시겠습니까?", {
+      buttons: ["취소", "완료"],
+    });
+
     if (ok) {
       // delete tweet
       await dbService.doc(`tweets/${tweetObj.id}`).delete();
@@ -44,16 +48,16 @@ const Tweet = ({ tweetObj, isOwner }) => {
                 <input
                   className="formInput"
                   type="text"
-                  placeholder="Edit your tweet"
+                  placeholder="수정할 내용을 입력하세요."
                   value={newTweet}
                   required
                   autoFocus
                   onChange={onChange}
                 />
-                <input className="formBtn" type="submit" value="Update Tweet" />
+                <input className="formBtn" type="submit" value="수정하기" />
               </form>
               <button className="formBtn cancelBtn" onClick={toggleEditing}>
-                Cancel
+                취소
               </button>
             </>
           )}

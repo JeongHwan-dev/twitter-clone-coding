@@ -92,7 +92,7 @@ const TweetFactory = ({ userObj }) => {
         <div className="factoryForm_attachment">
           <img src={attachment} style={{ backgroundImage: attachment }} />
           <div className="factoryForm_clear" onClick={onClearAttachment}>
-            <span>Remove</span>
+            <span>취소</span>
             <FontAwesomeIcon icon={faTimes} />
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { authService } from "fBase";
+import swal from "sweetalert";
 
 const Profile = ({ userObj, refreshUser }) => {
   const history = useHistory();
@@ -19,12 +20,21 @@ const Profile = ({ userObj, refreshUser }) => {
   };
 
   const onSubmit = async (event) => {
-    event.preventDefault();
+    const ok = await swal("수정하시겠습니까?", {
+      buttons: ["취소", "완료"],
+    });
 
-    if (userObj.displayName !== newDisplayName) {
-      await userObj.updateProfile({
-        displayName: newDisplayName,
-      });
+    if (ok) {
+      event.preventDefault();
+
+      if (userObj.displayName !== newDisplayName) {
+        await userObj.updateProfile({
+          displayName: newDisplayName,
+        });
+        refreshUser();
+        swal(`'${newDisplayName}' 으로 닉네임 변경이 완료되었습니다.`);
+      }
+    } else {
       refreshUser();
     }
   };
@@ -38,17 +48,17 @@ const Profile = ({ userObj, refreshUser }) => {
           autoFocus
           value={newDisplayName}
           onChange={onChange}
-          placeholder="Display name"
+          placeholder="새 닉네임을 입력해주세요."
         />
         <input
           className="formBtn"
           type="submit"
-          value="Update Profile"
+          value="프로필 수정"
           style={{ marginTop: 10 }}
         />
       </form>
       <span className="formBtn cancelBtn logOut" onClick={onLogOutClick}>
-        Log Out
+        로그아웃
       </span>
     </div>
   );
