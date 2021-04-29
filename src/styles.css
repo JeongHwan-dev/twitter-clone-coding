@@ -52,6 +52,7 @@ form {
   text-align: center;
   background-color: white;
   color: black;
+  box-sizing: border-box;
 }
 
 .formBtn {
@@ -64,11 +65,13 @@ form {
   border-radius: 20px;
   background-color: #04aaff;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .cancelBtn {
   cursor: pointer;
   background-color: tomato;
+  box-sizing: border-box;
 }
 
 /* Profile Page */
@@ -83,6 +86,7 @@ form {
 
 .logOut {
   margin-top: 50px;
+  box-sizing: border-box;
 }
 
 /* Twitter Factory */
@@ -230,7 +234,9 @@ form {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-left: 20px;
   max-width: 320px;
+  box-sizing: border-box;
 }
 
 .authBtn {
@@ -240,9 +246,10 @@ form {
   padding: 10px 0px;
   font-size: 12px;
   text-align: center;
-  width: 150px;
+  width: 155px;
   background: white;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* AuthForm */
@@ -278,10 +285,10 @@ form {
 .authSwitch {
   color: #04aaff;
   cursor: pointer;
+  margin-left: 20px;
   margin-top: 10px;
   margin-bottom: 50px;
   display: block;
   font-size: 12px;
   text-decoration: underline;
-  text-align: center;
 }
