@@ -1,45 +1,55 @@
-# :bird: 트위터 클론 (Twitter Clone)
+<div align="center">
+  <br />
+  <img src="./images/twitter_logo.jpg" alt="Twitter" height="200px" />
+  <br />
+  <br />
+  <h1>:bird: 트위터 클론 (Twitter Clone)</h1>
+  <br />
+</div>
 
-## 1. 프로젝트 소개
+## 목차
 
-&nbsp;&nbsp;React와 Firebase를 활용하여 직접 `트위터의 주요 기능들을 클론` 해보는 프로젝트입니다.
+1. [웹 서비스 소개](#1.-웹-서비스-소개)
+2. [기술 스택](#2.-기술-스택)
+3. [주요 기능](#3.-주요-기능)
+4. [배포된 주소](#4.-배포된-주소)
+
+<br />
+
+## 1. 웹 서비스 소개
+
+**React**와 **Firebase**를 활용하여 직접 `트위터의 주요 기능들을 클론` 한 웹 서비스입니다.
+
+<br />
 
 ## 2. 기술 스택
 
-- HTML
-- CSS
-- Javascript
-- React `17.0.2`
-- react-router-dom `5.2.0`
-- SweetAlert `2.1.2`
-- FortAwesome
-- Firebase `8.3.2`
+**Front-end**
 
-<p align="left"> 
-  <a href="https://www.w3schools.com/css/" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="70" height="70"/> 
-  </a>
+- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?&logo=html5&logoColor=white)
+- ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?&logo=css3&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?&logo=javascript&logoColor=white)
+- ![React](https://img.shields.io/badge/-React-61DAFB?&logo=react&logoColor=white)
 
-  <a href="https://www.w3.org/html/" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="70" height="70"/> 
-  </a> 
-  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="70" height="70"/> 
-  </a> 
-  <a href="https://reactjs.org/" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="70" height="70"/> 
-  </a>
-    <a href="https://firebase.google.com/" target="_blank"> 
-    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="70" height="70"/> 
-  </a> 
-</p>
+**Back-end**
+
+- ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?&logo=firebase&logoColor=white)
+
+**ETC**
+
+- ![Git](https://img.shields.io/badge/-Git-F05032?&logo=git&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/-GitHub-181717?&logo=github&logoColor=white)
+
+<br />
 
 ## 3. 주요 기능
 
 - Email, Google 계정, Github 계정을 이용한 회원가입 및 로그인 기능
-- Tweet CRUD
+- Tweet 게시글 CRUD(Create, Read, Update, Delete)
 - 프로필 페이지 구현
-- 파일 업로드 기능
+- 사진 파일 업로드 기능
+
+<br />
 
 ## 4. 배포된 주소
 
