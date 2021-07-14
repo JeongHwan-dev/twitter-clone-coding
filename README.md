@@ -2,7 +2,6 @@
   <br />
   <img src="./images/twitter_logo.jpg" alt="Twitter" height="200px" />
   <br />
-  <br />
   <h1>:bird: 트위터 클론 (Twitter Clone)</h1>
   <br />
 </div>
