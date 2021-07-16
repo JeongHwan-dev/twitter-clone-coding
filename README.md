@@ -17,7 +17,7 @@
 
 <br />
 
-## :bulb: 웹 서비스 소개
+## 💁🏻‍♂ 웹 서비스 소개
 
 **React**와 **Firebase**를 활용하여 직접 `트위터의 주요 기능들을 클론` 한 웹 서비스입니다.
 
@@ -40,7 +40,7 @@
 
 <br />
 
-## :high_brightness: 주요 기능
+## :bulb: 주요 기능
 
 - Email, Google 계정, Github 계정을 이용한 회원가입 및 로그인 기능
 - Tweet 게시글 CRUD(Create, Read, Update, Delete)
