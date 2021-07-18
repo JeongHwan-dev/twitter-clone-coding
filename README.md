@@ -83,13 +83,19 @@
 $ git clone https://github.com/JeongHwan-dev/twitter-clone-coding.git
 ```
 
-2. **필요한 node_modules 설치** (복제한 저장소 위치에서)
+2. **프로젝트 폴더로 이동**
+
+```bash
+$ cd twitter-clone-coding
+```
+
+3. **필요한 node_modules 설치**
 
 ```bash
 $ npm install
 ```
 
-3. **리액트 앱 실행**
+4. **리액트 앱 실행**
 
 ```bash
 $ npm start
