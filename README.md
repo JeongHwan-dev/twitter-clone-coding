@@ -11,15 +11,23 @@
 
 ## 목차
 
-1. [웹 서비스 소개](#웹-서비스-소개)
-2. [기술 스택](#기술-스택)
-3. [주요 기능](#주요-기능)
+1. **웹 서비스 소개**
+2. **기술 스택**
+3. **주요 기능**
+4. **주요 페이지**
+5. **실행 방법**
 
 <br />
 
 ## 💁🏻‍♂ 웹 서비스 소개
 
 **React**와 **Firebase**를 활용하여 직접 `트위터의 주요 기능들을 클론` 한 웹 서비스입니다.
+
+<br />
+
+[**🔗 배포된 웹 서비스로 바로가기 Click !**](https://jeonghwan-dev.github.io/twitter-clone-coding/#/) 👈
+
+> 새 창 열기 방법 : CTRL+click (on Windows and Linux) | CMD+click (on MacOS)
 
 <br />
 
@@ -40,9 +48,39 @@
 
 <br />
 
-## :bulb: 주요 기능
+## 💡 주요 기능
 
 - Email, Google 계정, Github 계정을 이용한 회원가입 및 로그인 기능
 - Tweet 게시글 CRUD(Create, Read, Update, Delete)
 - 프로필 페이지 구현
 - 사진 파일 업로드 기능
+
+<br />
+
+## 📄 주요 페이지
+
+|                               로그인 페이지                               |                              메인 페이지                              |                               프로필 페이지                                |
+| :-----------------------------------------------------------------------: | :-------------------------------------------------------------------: | :------------------------------------------------------------------------: |
+| <img src="./images/signin_page.png" alt="로그인 페이지" weight="100px" /> | <img src="./images/main_page.png" alt="메인 페이지" weight="100px" /> | <img src="./images/profile_page.png" alt="프로필 페이지" weight="100px" /> |
+
+<br />
+
+## 💻 실행 방법
+
+1. **원격 저장소 복제**
+
+```bash
+$ git clone https://github.com/JeongHwan-dev/twitter-clone-coding.git
+```
+
+2. **필요한 node_modules 설치** (복제한 저장소 위치에서)
+
+```bash
+$ npm install
+```
+
+3. **리액트 앱 실행**
+
+```bash
+$ npm start
+```
