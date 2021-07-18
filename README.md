@@ -13,9 +13,11 @@
 
 1. [**웹 서비스 소개**](#1)
 2. [**기술 스택**](#2)
-3. **주요 기능**
-4. **주요 페이지**
-5. **실행 방법**
+3. [**주요 기능**](#3)
+4. [**주요 페이지**](#4)
+5. [**실행 방법**](#5)
+
+<br />
 
 <div id="1"></div>
 
@@ -28,6 +30,8 @@
 [**🔗 배포된 웹 서비스로 바로가기 Click !**](https://jeonghwan-dev.github.io/twitter-clone-coding/#/) 👈
 
 > 새 창 열기 방법 : CTRL+click (on Windows and Linux) | CMD+click (on MacOS)
+
+<br />
 
 <div id="2"></div>
 
@@ -48,6 +52,8 @@
 
 <br />
 
+<div id="3"></div>
+
 ## 💡 주요 기능
 
 - Email, Google 계정, Github 계정을 이용한 회원가입 및 로그인 기능
@@ -57,6 +63,8 @@
 
 <br />
 
+<div id="4"></div>
+
 ## 📄 주요 페이지
 
 |                               로그인 페이지                               |                              메인 페이지                              |                               프로필 페이지                                |
@@ -64,6 +72,8 @@
 | <img src="./images/signin_page.png" alt="로그인 페이지" weight="100px" /> | <img src="./images/main_page.png" alt="메인 페이지" weight="100px" /> | <img src="./images/profile_page.png" alt="프로필 페이지" weight="100px" /> |
 
 <br />
+
+<div id="5"></div>
 
 ## 💻 실행 방법
 
