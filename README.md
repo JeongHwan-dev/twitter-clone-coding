@@ -46,7 +46,7 @@
 
 - ![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?&logo=firebase&logoColor=white)
 
-**ETC**
+**DevOps**
 
 - ![Git](https://img.shields.io/badge/-Git-F05032?&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/-GitHub-181717?&logo=github&logoColor=white)
 
